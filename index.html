@@ -75,9 +75,9 @@ button:active {
 
   const sound = {
     i1: new Audio('./sounds/I1.mp3'),
-    think:  new Audio('./sounds/think.mp3'),
+    left:  new Audio('./sounds/left.wav'),
     i2: new Audio('./sounds/I2.mp3'),
-    love: new Audio('./sounds/love.mp3'),
+    right: new Audio('./sounds/right.wav'),
     you: new Audio('./sounds/you.mp3')
   }
 
@@ -85,13 +85,13 @@ button:active {
     sound.i1.play()
   })
   document.getElementById('left').addEventListener('click', () => {
-    sound.think.play()
+    sound.left.play()
   })
   document.getElementById('stop').addEventListener('click', () => {
     sound.i2.play()
   })
   document.getElementById('right').addEventListener('click', () => {
-    sound.love.play()
+    sound.right.play()
   })
   document.getElementById('back').addEventListener('click', () => {
     sound.you.play()
