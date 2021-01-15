@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<!--
+  https://www.w3schools.com/howto/howto_css_flip_card.asp
+  https://colorhunt.co/palette/213442
+-->
+
+<head>
+  <title>❤️❤️❤️</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<style>
+
+
+  @import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css);
+
+html, body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff3e6;
+}
+
+.arrows {
+  text-align: center;
+}
+
+button {
+  font-size: 5rem;
+  background: #1a508b;
+  outline: none;
+  border-radius: 1rem;
+  border: none;
+  padding: 1rem;
+  color: #c1a1d3;
+  margin: 0.2rem;
+}
+
+button:active {
+  background-color: #0d335d;
+}
+
+</style>
+
+
+<body>
+  <div class="arrows">
+    <button id="straight">
+      <i class="fas fa-arrow-up"></i>
+    </button>
+    <br/>
+    <button id="left">
+      <i class="fas fa-arrow-left"></i>
+    </button>
+    <button id="stop">
+      <i class="fas fa-stop"></i>
+    </button>
+    <button id="right">
+      <i class="fas fa-arrow-right"></i>
+    </button><br/>
+    <button id="back">
+      <i class="fas fa-arrow-down"></i>
+    </button>
+  </div>
+</body>
+
+
+
+<script>
+
+  const sound = {
+    i1: new Audio('./sounds/I1.mp3'),
+    think:  new Audio('./sounds/think.mp3'),
+    i2: new Audio('./sounds/I2.mp3'),
+    love: new Audio('./sounds/love.mp3'),
+    you: new Audio('./sounds/you.mp3')
+  }
+
+  document.getElementById('straight').addEventListener('click', () => {
+    sound.i1.play()
+  })
+  document.getElementById('left').addEventListener('click', () => {
+    sound.think.play()
+  })
+  document.getElementById('stop').addEventListener('click', () => {
+    sound.i2.play()
+  })
+  document.getElementById('right').addEventListener('click', () => {
+    sound.love.play()
+  })
+  document.getElementById('back').addEventListener('click', () => {
+    sound.you.play()
+  })
+
+</script>
+
+</html>
